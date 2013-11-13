@@ -1,0 +1,15 @@
+" ===================================================
+" File .vimrc.diff
+" Author : Masashi Kayahara <sylphs.mb@gmail.com >
+" ===================================================
+if &diff
+    " Move Diff Next
+    map <C-J>  ]c
+    " Move Diff Preview
+    map <C-K>  [c
+    " Copy Diff [ Left  --> Right ]
+    map <C-H>  do
+    " Copy Diff [ Right --> Left  ]
+    map <C-L>  dp
+endif
+

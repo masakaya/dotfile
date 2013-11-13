@@ -1,0 +1,9 @@
+#####################
+# Install script
+#####################
+
+# Development Tool Install 
+1.run install_pkg.sh
+
+# create SymblicLink
+2.run setup.sh

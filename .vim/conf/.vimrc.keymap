@@ -1,0 +1,46 @@
+" ===================================================
+" File .vimrc.keymap
+" Author : Masashi Kayahara <sylphs.mb@gmail.com >
+" Description : 
+"   Vim defautl func keymaps. 
+"   << Plugin keymaps >> define .vimrc.plugin
+" ===================================================
+"changes to the directory of an active file. 
+nnoremap <space>c :cd %:p:h<cr> 
+" Mark
+nnoremap <Space>m  :<C-u>marks
+" registers
+nnoremap <Space>r  :<C-u>registers
+" help
+nnoremap <Space>h  :<C-u>help<Space>
+
+"----------------------------------------------------
+" Tab
+"----------------------------------------------------
+" TabMove Down
+nnoremap <C-J>    <C-W>j
+" TabMove UP
+nnoremap <C-K>    <C-W>k
+" TabMove Left
+nnoremap <C-L>    <C-W>l
+" TabMove Right
+nnoremap <C-H>    <C-W>h
+" Note. Tab Resize <C-W>_
+
+"----------------------------------------------------
+" Search
+"----------------------------------------------------
+"clearing highlighted search
+nnoremap <silent>gh :nohlsearch<CR>
+
+"----------------------------------------------------
+" Quickfix
+"----------------------------------------------------
+map <C-N> :cn<CR> 
+map <C-P> :cp<CR>
+
+"----------------------------------------------------
+" Format
+"----------------------------------------------------
+nmap <C-F><C-A> gggqG<CR>
+

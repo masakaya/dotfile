@@ -1,0 +1,143 @@
+" ======================================================================================
+" File .vimrc_global
+" Author : Masashi Kayahara <sylphs.mb@gmail.com >
+" ======================================================================================
+"----------------------------------------------------
+" Encoding Setting
+"----------------------------------------------------
+set encoding=utf-8                                " encoding utf-8
+set fileencoding=utf-8                            " file save encoding utf-8
+set termencoding=utf-8                            " terminal encoding  utf-8
+set fileencodings=ucs-bom,utf-8,cp936,sjis,euc-jp " fencs==fileencodings
+set ambiwidth=double
+
+"----------------------------------------------------
+" Language Setting
+"----------------------------------------------------
+set langmenu=none           " always use English menu
+language ja_JP.utf8         " Language japan
+language message ja_JP.utf8 " Language message japan
+"set helplang=ja,en         " ( Disable ) Help Language en
+
+"----------------------------------------------------
+" Complete Setting
+"----------------------------------------------------
+set completeopt=menu,longest
+set complete=.,w,b,k,s,i,d,t,u,U
+
+"----------------------------------------------------
+" Regular expression Setting
+"----------------------------------------------------
+set magic
+
+"----------------------------------------------------
+" Beeping Setting
+"----------------------------------------------------
+set noerrorbells
+set novisualbell
+set vb
+set t_vb=
+
+"----------------------------------------------------
+" Search Setting
+"----------------------------------------------------
+set hlsearch "highlight search things
+
+"----------------------------------------------------
+" TAB / Indent Setting
+"----------------------------------------------------
+set smarttab
+set tabstop=4    " Number of spaces that a <Tab> in the file counts for.
+set autoindent   " Set Enable copy indent from current line when starting a new line
+set smartindent  " Set Enable autoindent when starting a new line ( C-like programing )
+set cindent      " Set cindent on to autoindent when editing C/C++
+set shiftwidth=4 " Number of spaces to use for each step of (auto)indent
+set expandtab    " Use the appropriate number of spaces to insert a <Tab>.
+set shiftround   " When at 3 spaces, and I hit > ... go to 4, not 5
+
+"----------------------------------------------------
+" Histrory Setting
+"----------------------------------------------------
+set history=400     "Sets how many lines of history VIM har to remember
+
+"----------------------------------------------------
+" Backup/Read Setting
+"----------------------------------------------------
+set updatetime=1000 " default = 4000
+set autoread        " auto read same-file change ( better for vc/vim change )
+
+"----------------------------------------------------
+" Mouse Setting
+"----------------------------------------------------
+"set mouse=a
+
+"----------------------------------------------------
+" Auto Setting
+"----------------------------------------------------
+"set autochdir "Auto Change Directory
+
+"----------------------------------------------------
+" Edit Setting
+"----------------------------------------------------
+set nrformats=octal,hex        " When press  CTRL-A/CTRL-X on number. adding/subtracting
+set ve=block                   " In Visual Block Mode, cursor can be positioned  where there is no actual charcter
+set hidden                     " allow to change buffer without saving
+set backspace=indent,eol,start " set backspace=indent,eol,start allow backspacing  backspacing over everything in insert mode " indent options
+set imcmdline
+set whichwrap=b,s,h,l,<,>,[,]  " Set buckspace & cursor keys wrap to
+"set spell                     " Disable spell check
+set virtualedit=all             " Allow for beyond last character
+
+"----------------------------------------------------
+" Display Setting
+"----------------------------------------------------
+syntax on
+set notitle                " Disable Show Title
+set number                 " Show LineNumber
+set numberwidth=5          " Set LineNumber width
+set showcmd                " show partial commands in status line and selected characters/lines in visual mode
+set cmdheight=1            " Command Height Line 1
+set ruler                  " Show the cursor position all the time
+set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
+set lazyredraw             " set lz do not redraw while executing macros
+set display+=lastline      " for easy browse last line with wrap text
+set laststatus=2           " always have status-line
+set showfulltag            " When completing a word in insert mode from tag file , show both the tag name & tidied-up
+set showmatch              " When a bracket is inserted, briefly jump to the matching one.
+set matchtime=0            " 0 second to show the matching paren ( mach faster )
+set wildmenu               " turn on wild menu, try typing :h and press <Tab>
+set wildmode=list:longest  " turn on wild mode huge list
+set shortmess=mnrtI        " shortens messages to avoid 'press a key' prompt
+set nowrap                 " Disable wrap
+set wildignore=*.dll,*.o,*.so,*.obj,*.bak,*.exe,*.jpg,*.png*,*.gif " Complate ignore type
+set statusline+=%f\ %m%h%=%{(&fenc!=''?&fenc:&enc).':'.&ff}%{(&list?'>':'')}\ w=%04v/l=%l/a=%L\ [%p%%] "Set statusline
+set showmode
+set modeline
+set splitbelow
+set splitright
+set sessionoptions+=resize 
+set previewheight=7  " Set Preview windows( Ex.quickfix ) height
+set cursorcolumn  " Highlight the current column
+set cursorline    " Highlight the screen line of the cursor.
+set nostartofline " ( Disable ) Note:user compatible mode on
+set viewoptions=folds,options,cursor,unix,slash
+
+"----------------------------------------------------
+" Search Setting
+"----------------------------------------------------
+set incsearch  " do incremental searching 
+set ignorecase " Set search&replace pattern to ignore UPPER/LOWER case 
+set smartcase  " Set Search pattern to not ignore , when input word of upper case
+set maxmempattern=2000000 " enlarge maxmempattern from 1000 to 2000000
+
+"----------------------------------------------------
+" Fold Setting
+"----------------------------------------------------
+set nofoldenable "Enable folding
+set foldmethod=manual
+
+"----------------------------------------------------
+" Clipboard Setting
+"----------------------------------------------------
+set clipboard=unnamedplus,autoselect
+

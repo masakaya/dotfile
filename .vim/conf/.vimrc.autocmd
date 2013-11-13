@@ -1,0 +1,26 @@
+" ======================================================================================
+" File .vimrc_autocmd
+" Author : Masashi Kayahara <sylphs.mb@gmail.com >
+" ======================================================================================
+if has("autocmd")
+    autocmd BufReadPost * call SaveLine()
+    autocmd BufNewFile,BufRead *.cpp,*.c,*.cc,*.h,*.hpp call SetFormatAstyle()
+endif
+
+"----------------------------------------------------
+" Function:SaveLine 
+"----------------------------------------------------
+function SaveLine ()
+    if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
+endfunction
+
+"----------------------------------------------------
+" Function:Astyle
+"----------------------------------------------------
+function SetFormatAstyle()
+    if executable('astyle')
+        set formatprg=astyle\ -A8s4SP
+    endif
+endfunction
+
+

@@ -1,0 +1,7 @@
+-DDEBUG
+-include ../config.h
+-I../include
+-I/usr/include/
+-I/usr/include/c++/4.7/
+-I/usr/include/c++/4.8/
+
