@@ -127,13 +127,14 @@ NeoBundleLazy 'git://github.com/derekwyatt/vim-protodef.git' , {
 "----------------------------------
 NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
 
+NeoBundle 'git://github.com/thinca/vim-quickrun.git'
+
 " TODO...dispose and setting
 "NeoBundle 'git://github.com/vim-scripts/gtags.vim.git'
 "NeoBundle 'git://github.com/thinca/vim-qfreplace.git'
 "NeoBundle 'git://github.com/dannyob/quickfixstatus.git'
 "NeoBundle 'git://github.com/Lokaltog/vim-easymotion.git'
 "NeoBundle 'git://github.com/vim-scripts/occur.vim.git'
-"NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 "NeoBundle 'git://github.com/kana/vim-smartchr.git'
 
 filetype plugin on
