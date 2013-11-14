@@ -466,8 +466,9 @@ nnoremap <silent> <Space>gd :Gdiff<CR>
 nnoremap <silent> <Space>gs :Gstatus<CR>
 nnoremap <silent> <Space>gw :Gwrite<CR>
 nnoremap <silent> <Space>gr :GRead<CR>
+nnoremap <silent> <Space>gc :Gcommit<Space>
 
-""----------------------------------------------------
+" ""----------------------------------------------------
 "" DoxygenToolkit
 ""----------------------------------------------------
 "let g:load_doxygen_syntax=1
