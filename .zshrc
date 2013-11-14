@@ -144,3 +144,7 @@ if [ -f ~/.zsh/antigen/antigen.zsh ] ; then
     source ~/.zsh/.zshrc.antigen
 fi
 
+
+export CC=clang
+export CXX=clang++
+
