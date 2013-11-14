@@ -57,7 +57,8 @@ setopt auto_pushd
 ## duplication directory no pushd
 setopt pushd_ignore_dups
 ## command correct edition before each completion attempt
-setopt correct
+#setopt correct
+
 ## 補完候補を一覧表示
 setopt auto_list
 ## TAB で順に補完候補を切り替える
