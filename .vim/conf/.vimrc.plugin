@@ -466,21 +466,21 @@ nnoremap <silent> <Space>gd :Gdiff<CR>
 nnoremap <silent> <Space>gs :Gstatus<CR>
 nnoremap <silent> <Space>gw :Gwrite<CR>
 nnoremap <silent> <Space>gr :GRead<CR>
-nnoremap <silent> <Space>gc :Gcommit<Space>
+nnoremap <silent> <Space>gc :Gcommit<CR>
 
 " ""----------------------------------------------------
 "" DoxygenToolkit
 ""----------------------------------------------------
-"let g:load_doxygen_syntax=1
-"let g:DoxygenToolkit_paramTag_pre="@param :"  
-"let g:DoxygenToolkit_returnTag="@return  :"  
-"let g:DoxygenToolkit_compactOneLineDoc ="no"
-"let g:DoxygenToolkit_authorName="Masashi Kayahara <sylphs.mb AT gmail.com>" 
-"let g:DoxygenToolkit_briefTag_funcName = "yes"
-"let g:DoxygenToolkit_briefTag_className = "yes"
-"let g:DoxygenToolkit_briefTag_structName = "yes"
-"let g:DoxygenToolkit_briefTag_enumName = "yes"
-"let g:DoxygenToolkit_briefTag_namespaceName ="yes"
+let g:load_doxygen_syntax=1
+let g:DoxygenToolkit_paramTag_pre="@param :"  
+let g:DoxygenToolkit_returnTag="@return  :"  
+let g:DoxygenToolkit_compactOneLineDoc ="no"
+let g:DoxygenToolkit_authorName="Masashi Kayahara <sylphs.mb AT gmail.com>" 
+let g:DoxygenToolkit_briefTag_funcName = "yes"
+let g:DoxygenToolkit_briefTag_className = "yes"
+let g:DoxygenToolkit_briefTag_structName = "yes"
+let g:DoxygenToolkit_briefTag_enumName = "yes"
+let g:DoxygenToolkit_briefTag_namespaceName ="yes"
 
 
 
