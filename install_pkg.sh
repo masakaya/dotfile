@@ -97,6 +97,11 @@ sudo aptitude -y install nkf
 sudo aptitude -y install parallel
 
 #-----------------------------
+# Terminal Tool
+#-----------------------------
+sudo aptitude -y install tmux
+
+#-----------------------------
 # TBD Other 
 #-----------------------------
 # See Static Code analysis :

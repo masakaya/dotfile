@@ -83,7 +83,15 @@ NeoBundle 'git://github.com/thinca/vim-ref.git'
 "----------------------------------
 " Shell Plugin
 "----------------------------------
-NeoBundle 'git://github.com/Shougo/vimshell.git'
+"NeoBundle 'git://github.com/Shougo/vimshell.git'
+NeoBundleLazy 'git://github.com/Shougo/vimshell.git' , {
+      \ 'depends' : 'Shougo/vimproc',
+      \ 'autoload' : {
+      \   'commands' : [{ 'name' : 'VimShell',
+      \                   'complete' : 'customlist,vimshell#complete'},
+      \                 'VimShellExecute', 'VimShellInteractive',
+      \                 'VimShellTerminal', 'VimShellPop'],
+      \ }}
 
 "----------------------------------
 " Display Plugin
@@ -163,6 +171,7 @@ let g:neocomplete#max_list = 20
 
 let g:neocomplete#sources#dictionary#dictionaries = {
     \ 'default'      : '',
+    \ 'vimshell'     : $HOME . '/.vimshell/command-history',
     \ 'php'          : $VIMHOME . '/dict/php.dict'  ,
     \ 'ctp'          : $VIMHOME . '/dict/php.dict'  ,
     \ 'pl'           : $VIMHOME . '/dict/perl.dict' ,
@@ -412,6 +421,18 @@ xmap <Space>D <Plug>(textmanip-duplicate-up)
 " Tagbar
 "----------------------------------------------------
 nnoremap <Space>to :TagbarToggle<CR>  
+
+"----------------------------------------------------
+" VimShell
+"----------------------------------------------------
+let g:vimshell_prompt_expr = 'escape(fnamemodify(getcwd(), ":~").">", "\\[]()?! ")." "'
+let g:vimshell_prompt_pattern =  '^\(\f\|\\.\)\+> '
+let g:vimshell_max_command_history = 3000
+let g:vimshell_vimshrc_path = $VIMRC . '/.vimshrc'
+let g:vimshell_interactive_update_time = 50
+nnoremap ,vs :VimShell<CR>
+nnoremap ,vsp :VimShellPop<CR>
+nnoremap ,vsc :VimShellCreate<CR>
 
 ""----------------------------------------------------
 "" DoxygenToolkit
