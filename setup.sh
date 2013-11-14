@@ -1,6 +1,6 @@
 #!/bin/bash
 readonly DOT_FILES_ROOT="dotfile"
-readonly DOT_FILES=( .vim .zsh .vimrc .zshrc .clang_complate )
+readonly DOT_FILES=( .vim .zsh .vimrc .zshrc .clang_complate .gitconfig )
 
 for file in ${DOT_FILES[@]}
 do
