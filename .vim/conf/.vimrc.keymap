@@ -13,6 +13,8 @@ nnoremap <Space>m  :<C-u>marks
 nnoremap <Space>r  :<C-u>registers
 " help
 nnoremap <Space>h  :<C-u>help<Space>
+" Close
+nnoremap <Space>cl :close<CR>
 
 "----------------------------------------------------
 " Tab
@@ -25,6 +27,7 @@ nnoremap <C-K>    <C-W>k
 nnoremap <C-L>    <C-W>l
 " TabMove Right
 nnoremap <C-H>    <C-W>h
+
 " Note. Tab Resize <C-W>_
 
 "----------------------------------------------------
