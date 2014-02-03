@@ -144,7 +144,11 @@ NeoBundleLazy 'thinca/vim-qfreplace', {
 "NeoBundle 'git://github.com/Lokaltog/vim-easymotion.git'
 "NeoBundle 'git://github.com/vim-scripts/occur.vim.git'
 "NeoBundle 'git://github.com/kana/vim-smartchr.git'
-
+ "----------------------------------
+" Refernence Plugin
+"----------------------------------
+NeoBundle 'git://github.com/mattn/emmet-vim'
+ 
 filetype plugin on
 filetype indent on
 
