@@ -44,5 +44,5 @@ if filereadable($VIMRC.'/.vimrc.path') | source $VIMRC/.vimrc.path | endif
 if filereadable($VIMRC.'/.vimrc.plugin') | source $VIMRC/.vimrc.plugin | endif
 
 "Load color ( depends plugin : neobundle )
-if filereadable($VIMRC.'/.vimrc.color') | source $VIMRC/.vimrc.color | endif
+"if filereadable($VIMRC.'/.vimrc.color') | source $VIMRC/.vimrc.color | endif
 
