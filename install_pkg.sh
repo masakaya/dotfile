@@ -25,8 +25,6 @@ sudo aptitude -y install omake
 #-----------------------------
 # RCS
 #-----------------------------
-# git 
-sudo aptitude -y install git 
 # git client( tig )
 sudo aptitude -y install tig
 # subversion
@@ -47,14 +45,12 @@ sudo aptitude -y install cgdb
 sudo aptitude -y install valgrind
 # ltrace strace kmtrace
 sudo aptitude -y install ltrace ctrace kmtrace
-# gprof
-sudo aptitude -y install gprof
 
 #-----------------------------
 # Editor
 #-----------------------------
-# vim gvim
-sudo aptitude -y install vim gvim
+# vim gvim ( Disable -- use install_vim.sh )
+# sudo aptitude -y install vim gvim
 
 #-----------------------------
 # Code search(Taggin)
@@ -68,7 +64,7 @@ sudo aptitude -y install global
 # ack-grep
 sudo aptitude -y install ack-grep
 # silver-searcher
-sudo aptitude -y silversearcher-ag
+sudo aptitude -y install silversearcher-ag
 
 #-----------------------------
 # Code Style
@@ -100,6 +96,21 @@ sudo aptitude -y install parallel
 # Terminal Tool
 #-----------------------------
 sudo aptitude -y install tmux
+
+#-----------------------------
+# Source Code Package Management Tool
+#-----------------------------
+# paco
+readonly WORK_PACO_TMPDIR="/tmp/work/paco"
+mkdir -p $WORK_PACO_TMPDIR
+cd $WORK_PACO_TMPDIR
+wget http://sourceforge.net/projects/paco/files/paco/2.0.9/paco-2.0.9.tar.gz
+tar zxvf paco-2.0.9.tar.gz
+cd paco-2.0.9
+./configure --prefix=/usr --disable-gpaco
+make
+sudo make install
+sudo make logme
 
 #-----------------------------
 # TBD Other 
